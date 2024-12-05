@@ -6,10 +6,13 @@ const multiply = (x,y) => x * y;
 const divide = (x,y) => x / y;
 
 
-var num1    //first number
-var op      //operator
-var num2    //second number
+var numX;   //first number
+var op;      //operator
+var numY;    //second number
 
-const operate = function(num1, op, num2){
+const operate = function(numX, op, numY){
+    // pseudo code
+    const x = numX
 
+    // if 
 } 
