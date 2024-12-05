@@ -1,17 +1,15 @@
-const add = function(a, b) {
-    return a + b
-}
 
-const subtract = function(a, b) {
-    return a - b
-}
+// operators
+const add = (x, y) => x + y;
+const subtract = (x,y) => x - y;
+const multiply = (x,y) => x * y;
+const divide = (x,y) => x / y;
 
-const multiply = function(a, b) {
-    return a * b
-}
 
-const divide = function(a, b) {
-    return a / b
-}
+var num1    //first number
+var op      //operator
+var num2    //second number
 
-console.log(divide(10, 5))
+const operate = function(num1, op, num2){
+
+} 
