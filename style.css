@@ -1,0 +1,25 @@
+#num-ops {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(4, 1fr);
+    width: 200px;
+    height: 200px;
+}
+
+#bottom-row{
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    height: 50px;
+}
+
+.zero{
+    width: 100px;
+    gap: 1px;
+}
+
+.period, .equal {
+    width: 50px;
+    gap: 1px;
+}
+

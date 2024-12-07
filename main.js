@@ -6,13 +6,23 @@ const multiply = (x,y) => x * y;
 const divide = (x,y) => x / y;
 
 
-var numX;   //first number
-var op;      //operator
-var numY;    //second number
+// work on this first, how do I store the number? and after an operator is hit, how do I 
+let numX;    // first number
+let op;      // operator
+let numY;    // second number
+let total;   // store the number after equal or the next operator is pressed.
 
-const operate = function(numX, op, numY){
+
+//start with storing numbers up to multiple digits into one variable
+document.querySelector('#numbers').addEventListener('click', event => {
+
+})
+
+// when equal is hit, it will call upon this Operate function
+const operate = function(op, numX, numY) {
     // pseudo code
-    const x = numX
+    const x = numX 
+    const y = numY
 
-    // if 
+    
 } 
