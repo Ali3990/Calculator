@@ -14,9 +14,14 @@ let total;   // store the number after equal or the next operator is pressed.
 
 
 //start with storing numbers up to multiple digits into one variable
-document.querySelector('#numbers').addEventListener('click', event => {
+document.querySelector(".num-ops").addEventListener('click', event => {
+    let target = event.target;
+    if (target.matches('button')) {
+        let value = target.innerHTML
 
-})
+        document.querySelector('#output').value += value
+    }
+});
 
 // when equal is hit, it will call upon this Operate function
 const operate = function(op, numX, numY) {
