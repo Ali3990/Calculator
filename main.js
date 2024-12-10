@@ -2,6 +2,7 @@
 const output = document.querySelector("#display");
 const numbers = document.querySelectorAll(".number"); // store all the button number elements in Array
 const operators = document.querySelectorAll(".op"); // store all the operators
+
 const clear = document.querySelector(".clear");
 
 // operators
@@ -37,6 +38,7 @@ operators.forEach((op) => {
         operator = e.target.innerText;
     })
 })
+
 
 
 // Erases all the stored values and text value within the display window.
