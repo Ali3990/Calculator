@@ -39,7 +39,9 @@ operators.forEach((op) => {
     })
 })
 
+const calc = function(){
 
+}
 
 // Erases all the stored values and text value within the display window.
 const clearAll = function(){
