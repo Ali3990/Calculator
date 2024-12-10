@@ -1,33 +1,30 @@
 
+const numbers = document.querySelectorAll(".number") // store all the button number elements in Array
+
 // operators
 const add = (x, y) => x + y;
 const subtract = (x,y) => x - y;
 const multiply = (x,y) => x * y;
 const divide = (x,y) => x / y;
 
+let displayValue = "0";
 
 // work on this first, how do I store the number? and after an operator is hit, how do I 
-let numX;    // first number
-let op;      // operator
-let numY;    // second number
-let total;   // store the number after equal or the next operator is pressed.
+let firstNum;    // first number
+let operator;      // operator
+let secondNum;    // second number
 
 
 //start with storing numbers up to multiple digits into one variable
-document.querySelector(".num-ops").addEventListener('click', event => {
-    let target = event.target;
-    if (target.matches('button')) {
-        let value = target.innerHTML
-
-        document.querySelector('#output').value += value
-    }
+numbers.forEach((number) => {
+    number.addEventListener("click", e => {
+        if (operator === "") { // Read first number if no operator has been set
+            firstNum += e.target.innerText;
+            console.log(firstNum)
+        } else { //Read second number
+            secondNum += e.target.innerText;
+            console.log(secondNum)
+        }
+    })
 });
 
-// when equal is hit, it will call upon this Operate function
-const operate = function(op, numX, numY) {
-    // pseudo code
-    const x = numX 
-    const y = numY
-
-    
-} 
