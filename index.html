@@ -9,9 +9,9 @@
 </head>
 <body>
     <h1> Basic Calculator </h1>
-    <input id="output" type="text">
+    <input id="display" type="text">
     <div id="num-ops">
-        <button class="clear">AC</button>
+        <button class="clear" onclick="clearAll()">AC</button>
         <button class="sign">+/-</button>
         <button class="percentage">%</button>
         <button class="op divide">/</button>
@@ -30,9 +30,9 @@
     </div>
    
     <div id="bottom-row">
-        <button class="zero">0</button>
+        <button class="number zero">0</button>
         <button class="period">.</button>
-        <button class="equal">=</button>
+        <button class="equal" onclick="calc()">=</button>
     </div>
 
 
