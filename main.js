@@ -2,7 +2,6 @@
 const output = document.querySelector("#display");
 const numbers = document.querySelectorAll(".number"); // store all the button number elements in Array
 const operators = document.querySelectorAll(".op"); // store all the operators
-
 const clear = document.querySelector(".clear");
 
 // operators
@@ -21,26 +20,37 @@ let currResult = ""; // ongoing tab of current calculated value
 
 //start with storing numbers up to multiple digits into one variable
 numbers.forEach((number) => {
-    number.addEventListener("click", e => {
+    number.addEventListener("click", event => {
         if (operator === "") { // Read first number if no operator has been set
-            firstNum += e.target.innerText;
+            firstNum += event.target.innerText;
             output.value = firstNum;
         } 
         else { // If operator is set, read second number
-            secondNum += e.target.innerText;
+            secondNum += event.target.innerText;
             output.value = secondNum;
         }
     })
 });
 
 operators.forEach((op) => {
-    op.addEventListener("click", e =>{
-        operator = e.target.innerText;
+    op.addEventListener("click", event =>{
+        operator = event.target.innerText;
     })
 })
 
 const calc = function(){
-
+    a = Number(firstNum)
+    b = Number(secondNum)
+    switch (operator){
+        case '+':
+            output.value = add(a, b)
+        case '-':
+            output.value = subtract(a, b)
+        case '*':
+            output.value = multiply(a, b)
+        case '/':
+            output.value = divide(a, b)
+    }
 }
 
 // Erases all the stored values and text value within the display window.
