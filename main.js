@@ -3,6 +3,7 @@ const output = document.querySelector("#display");
 const numbers = document.querySelectorAll(".number"); // store all the button number elements in Array
 const operators = document.querySelectorAll(".op"); // store all the operators
 const clear = document.querySelector(".clear")
+const sign = document.querySelector(".sign")
 
 
 // operators
@@ -34,10 +35,24 @@ numbers.forEach((number) => {
 });
 
 operators.forEach((op) => {
-    op.addEventListener("click", event =>{
+    op.addEventListener("click", event => {
         operator = event.target.innerText;
         console.log(operator)
     })
+})
+
+sign.addEventListener("click", event => {
+    if (operator === ""){
+        output.value = firstNum*-1;
+        firstNum *= -1;
+        console.log(firstNum);
+    }
+    else {
+        output.value = secondNum*-1;
+        secondNum *= -1;
+        console.log(secondNum);
+    }
+        
 })
 
 const calc = function(){
@@ -45,20 +60,24 @@ const calc = function(){
     b = Number(secondNum)
     switch (operator){
         case '+':
-            output.value = a + b;
-            firstNum = a + b;
+            output.value = add(a, b);
+            firstNum = output.value;
+            continueCalc()
             break;
         case '-':
             output.value = subtract(a, b);
-            firstNum = subtract(a, b);
+            firstNum = output.value;
+            continueCalc()
             break;
         case '*':
             output.value = multiply(a, b);
-            firstNum = multiply(a, b);
+            firstNum = output.value;
+            continueCalc()
             break;
         case '/':
             output.value = divide(a, b);
-            firstNum = divide(a, b);
+            firstNum = output.value;
+            continueCalc()
             break;
     }
 }
@@ -70,5 +89,12 @@ const allClear = function(){
     operator = ""
     output.value = ""
     displayValue = "0"
+    output.value = "0"
+}
+
+// This function will clear out the operator and secondNum, so that the calculation can continue in the calc function
+const continueCalc = function() {
+    secondNum = ""
+    operator = ""
 }
 
