@@ -89,7 +89,6 @@ const allClear = function(){
     operator = ""
     output.value = ""
     displayValue = "0"
-    output.value = "0"
 }
 
 // This function will clear out the operator and secondNum, so that the calculation can continue in the calc function
